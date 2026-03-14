@@ -1,6 +1,6 @@
 """
-Inputs:
 
+Inputs:
     None
 
 Outputs:
@@ -68,15 +68,15 @@ def matchWinner(userMatch, darkMatch):
         win = False
 
 
-def rps():
+def rps_SD():
     global win
 
-    while score[0] < 2 and score[1] < 2:
+    while score[0] < 1 and score[1] < 1:
         userMove = getUserMove()
         darkMove = getDarkMove()
         roundWinner(userMove, darkMove)
         print(f"\nYou - {score[0]}; It - {score[1]}\n")
 
-    if score[0] == 2 or score[1] == 2:
+    if score[0] == 1 or score[1] == 1:
         matchWinner(score[0], score[1])
         return win
